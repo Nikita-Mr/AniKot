@@ -13,6 +13,7 @@ export default {
 <template>
   <div>
     <nav>
+      <img class="w-[60px]" src="~/public/logo-without.png" alt="">
       <ul>
         <li :class="{'active': $route.name == 'AniKot' }"><nuxt-link to="/AniKot">Аниме</nuxt-link></li>
         <li :class="{'active': $route.name == 'random' }"><nuxt-link to="/random">Рандомайзер</nuxt-link></li>

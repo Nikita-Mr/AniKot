@@ -35,7 +35,7 @@ export default {
     <div class="card">
       <div class="img">
         <nuxt-picture
-          :src="'https://anilibria.top' + poster"
+          :src="'https://anilibria.wtf' + poster"
           width="200px"
           height="200px"
           sizes="xs:50px md:200px lg:500px"

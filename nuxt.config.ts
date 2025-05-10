@@ -8,6 +8,11 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@nuxt/image',
   ],
+  app: {
+    head: {
+      title: 'Anikot',
+    },
+  },
   routeRules: {
     '/AniKot': { prerender: true },
     '/': { redirect: { to: '/AniKot' } },

@@ -3,7 +3,7 @@ export default defineCachedEventHandler(async (event) => {
     try {
       let { search } = getQuery(event);
       anime = await $fetch(
-        `https://anilibria.top/api/v1/app/search/releases/?query=`+search,
+        `https://anilibria.wtf/api/v1/app/search/releases/?query=`+search,
         {
           headers: {
             accept: 'application/json',

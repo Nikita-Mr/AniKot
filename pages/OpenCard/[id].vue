@@ -44,7 +44,7 @@ export default {
   <div class="wrapper-open-card">
     <div class="open-card" v-if="isHook">
       <nuxt-picture
-        :src="'https://anilibria.top/' + card.poster.optimized.src"
+        :src="'https://anilibria.wtf/' + card.poster.optimized.src"
         width="400px"
         height="400px"
         sizes="xs:50px md:200px lg:500px"
@@ -63,12 +63,16 @@ export default {
     <p class="description" v-if="isHook">
       {{ card.description }}
     </p>
-    <div class="episods">
-      <div v-for="item in card.episodes">
-          <img :src="'https://anilibria.top/' + item.preview.optimized.src">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M22 12c0 5.523-4.477 10-10 10S2 17.523 2 12S6.477 2 12 2s10 4.477 10 10m-5 0L9 7.5v9z" clip-rule="evenodd"/></svg>
+    <div class="episods flex flex-wrap gap-5 mx-5">
+      <div class="episod" v-for="(item, i) in card.episodes">
+          <div class="number">{{ i+1 }} серия</div>
+          <img class="poster" v-if="item.preview.optimized.src" :src="'https://anilibria.wtf/' + item.preview.optimized.src">
+          <div v-else="!item.preview.optimized.src" class="cover w-[100%] h-[168px]"></div>
+          <img class=" logo w-[120px]" v-if="!item.preview.optimized.src" src="~/public/logo-without.png">
       </div>
     </div>
+    <!-- <iframe class="mfp-iframe" frameborder="0" allowfullscreen="" src="https://anilibria.wtf/anime/video/episode/21115a11-3fee-42c4-9f01-135ddd46b587"></iframe> -->
+
 
     <!-- <video controls playsinline autoplay preload="auto" crossorigin="anonymous" width="250" src="https://cache-rfn.libria.fun/videos/media/ts/9314/1/1080/f5d69ce315f635bcbf7ca8ae3341ec66.m3u8?isWithAds=1&countryIso=RU&isAuthorized=0"></video> -->
 
@@ -97,24 +101,64 @@ svg{
   left: calc(50% - 10px);
 }
 
-.episods{
-  padding: 40px;
+.logo{
+  position: absolute;
+  top: calc(50% - 60px);
+  left: calc(50% - 54px);
+  filter: blur(3px);
+  opacity: 0.5;
 }
 
-.episods div{
-  height: 200px;
+.number{
+  position: absolute;
+  top: calc(50% - 15px);
+  left: 0;
+  z-index: 1;
+  font-weight: 700;
+  font-size: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.cover{
+  filter: blur(4px);
+  opacity: 0.5;
+  background: #494949;
+}
+
+.episods{
+  padding: 40px;
+  background: #212121;
+  border-radius: 1rem;
+}
+
+.episods .episod{
   width: 300px;
   position: relative;
   cursor: pointer;
+  overflow: hidden;
+  border-radius: 1rem;
+  border: 1px solid #171717;
+}
+.episods .episod:hover{
+  box-shadow: inset #fff 0px 1px 15px 8px;
+  transition: all 300ms;
 }
 
-.open-card img {
+.episods .poster{
+  border-radius: 1rem;
+  filter: blur(4px);
+  opacity: 0.5;
+}
+
+.open-card .poster {
   border-radius: 1rem;
 }
 
 .wrapper-open-card {
   background-color: #181818;
   border-radius: 10px;
+  padding-bottom: 40px;
 }
 
 .wrapper-open-card .description {

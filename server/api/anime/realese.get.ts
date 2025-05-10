@@ -4,7 +4,7 @@ export default defineCachedEventHandler(async (event) => {
   try {
     let { id } = getQuery(event);
     search = await $fetch(
-      `https://anilibria.top/api/v1/anime/releases/`+id,
+      `https://anilibria.wtf/api/v1/anime/releases/`+id,
       {
         headers: {
           accept: 'application/json',

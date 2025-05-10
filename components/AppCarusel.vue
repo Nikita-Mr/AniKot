@@ -61,6 +61,7 @@ export default {
   margin-bottom: 2rem;
 }
 
+
 h2 {
   padding: 0 0 20px 20px;
   font-size: 20px;
