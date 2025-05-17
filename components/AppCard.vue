@@ -83,6 +83,7 @@ a {
 }
 
 .card {
+  transition: all 300ms;
   cursor: pointer;
   display: block;
   max-width: 250px;
