@@ -31,7 +31,7 @@ async function register() {
     style="font-family: 'Work Sans', 'Noto Sans', sans-serif"
   >
     <AppAlert
-      :alert="'В разработке. По сути просто скопировал пока что код. Много багов которые мне не поддаются, пока-что'"
+      :alert="'В разработке. Если бы не эта ошибка с name которая мне не дает взаимодействовать с классами я бы уже закончил авторизацию. А так целый день вчера убил на решение проблем авторизации и этого name'"
     />
     <div class="layout-container flex h-full grow flex-col">
       <form
