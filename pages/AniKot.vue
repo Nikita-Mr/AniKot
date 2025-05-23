@@ -34,26 +34,29 @@ export default {
   mounted(){
     this.storage()
   },
-  watch:{
-    search:{
-      immediate: true,
-      handler(newQuestion, oldQuestion){
-        if (!newQuestion){
-          this.card = []
+    watch:{
+      search:{
+        immediate: true,
+        handler(newQuestion, oldQuestion){
+          if (newQuestion){
+            this.loadSearch()
+          }
+          if (!newQuestion){
+            this.card = []
+          }
+          if(oldQuestion && !newQuestion){
+            localStorage.setItem("anime", JSON.stringify([{"card": [], "search": ''}]));
+          }
         }
-        if(oldQuestion && !newQuestion){
-          localStorage.setItem("anime", JSON.stringify([{"card": [], "search": ''}]));
-        }
-      }
-    },
-    // card: {
-    //   handler(newQuestion, oldQuestion){
-    //     if (newQuestion != []){
-    //       this.storage()
-    //     }
-    //   }
-    // }
-  }
+      },
+      // card: {
+      //   handler(newQuestion, oldQuestion){
+      //     if (newQuestion != []){
+      //       this.storage()
+      //     }
+      //   }
+      // }
+    }
 };
 </script>
 <template>

@@ -14,12 +14,17 @@
     "@nuxt/ui": "^2.19.2",
     "@nuxtjs/color-mode": "^3.5.2",
     "@nuxtjs/tailwindcss": "^6.12.2",
+    "@pinia/nuxt": "^0.11.0",
     "git": "^0.1.5",
     "mongoose": "^8.8.4",
-    "nuxt": "^3.14.1592",
+    "nuxt": "^3.17.4",
+    "pinia": "^3.0.2",
     "socket.io": "^4.8.1",
     "socket.io-client": "^4.8.1",
     "vue": "latest",
     "vue-router": "latest"
+  },
+  "overrides": {
+    "vue": "latest"
   }
 }

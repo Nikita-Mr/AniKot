@@ -7,7 +7,11 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     '@nuxtjs/tailwindcss',
     '@nuxt/image',
+    '@pinia/nuxt',
   ],
+  pinia: {
+    storesDirs: ['./stores/**', './custom-folder/stores/**'],
+  },
   app: {
     head: {
       title: 'Anikot',
@@ -27,8 +31,8 @@ export default defineNuxtConfig({
     },
   },
   nitro: {
-    experimental:{
-      websocket: true
-    }
-  }
+    experimental: {
+      websocket: true,
+    },
+  },
 });

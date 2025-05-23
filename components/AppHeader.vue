@@ -19,11 +19,14 @@ export default {
         <li :class="{'active': $route.name == 'random' }"><nuxt-link to="/random">Рандомайзер</nuxt-link></li>
         <li :class="{'active': $route.name == 'find' }"><nuxt-link to="/find">Поиск по описанию</nuxt-link></li>
       </ul>
-      <UAvatar
-          size="sm"
-          src="https://i.pinimg.com/736x/b1/8b/49/b18b497cbd77eb4134bcbe3caa8d474c.jpg"
-          alt="Avatar"
-        />
+      <nuxt-link to="/Cabinet">
+        <UAvatar
+            size="sm"
+            src="https://i.pinimg.com/736x/b1/8b/49/b18b497cbd77eb4134bcbe3caa8d474c.jpg"
+            alt="Avatar"
+            class="cursor-pointer"
+          />
+      </nuxt-link>
     </nav>
   </div>
 </template>

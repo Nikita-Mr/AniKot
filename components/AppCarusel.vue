@@ -170,9 +170,18 @@ export default {
   margin-bottom: 2rem;
 }
 
+h2:hover{
+  transition: all 300ms;
+  /* font-size: 25px; */
+  transform: scale(120%);
+  /* padding-bottom: 15px; */
+}
+
 h2 {
   padding: 0 0 20px 20px;
+  transition: all 300ms;
   font-size: 20px;
+  display: inline-block;
 }
 
 .card {
