@@ -28,7 +28,7 @@ async function login() {
     class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden"
     style="font-family: 'Work Sans', 'Noto Sans', sans-serif"
   >
-    <AppAlert :alert="'В разработке. По сути просто скопировал пока что код. Много багов которые мне не поддаются, пока-что'" />
+    <AppAlert :alert="'В разработке. По сути просто скопировал пока что код. Много багов которые мне не поддаются, пока-что. И кстате почему то не могу взаимодействовать с темплейтом логина и пароля, а конкретно с классами, сразу крашит'" />
 
     <div class="layout-container flex h-full grow flex-col">
       <form
@@ -69,26 +69,22 @@ async function login() {
             </label>
           </div>
           <div class="flex px-4 py-3">
-            <button class="random block m-[auto]" @click="loadRandom()">
+            <button type="submit" class="random block m-[auto]">
               Войти
             </button>
           </div>
           <p
             class="text-[#4c6a9a] text-sm font-normal leading-normal pb-3 pt-1 px-4 text-center underline"
           >
-            Forgot your username or password?
+            Забыли пароль или email?
           </p>
-          <p
-            class="text-[#4c6a9a] text-sm font-normal leading-normal pb-3 pt-1 px-4 text-center underline"
-          >
-            Don't have an account? Sign up
-          </p>
-          <p
-            class="text-[#4c6a9a] text-sm font-normal leading-normal pb-3 pt-1 px-4 text-center"
-          >
-            By logging in, you agree to MSBANK's terms of use and privacy
-            policy.
-          </p>
+          <nuxt-link to="/register">
+            <p
+              class="text-[#4c6a9a] text-sm font-normal leading-normal pb-3 pt-1 px-4 text-center underline"
+            >
+              Нет аккаунта? Зарегестрируйся
+            </p>
+          </nuxt-link>
         </div>
       </form>
     </div>
