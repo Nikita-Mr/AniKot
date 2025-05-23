@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
 export default {
 
 };
@@ -36,4 +36,4 @@ export default {
 .sidebar li:hover{
     text-decoration: underline;
 }
-</style>
+</style> -->

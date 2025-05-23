@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
 export default {
   props: {
     chat: Object,
@@ -56,4 +56,4 @@ export default {
     border: 1px solid #ccc;
     margin-top: 10px;
 }
-</style>
+</style> -->

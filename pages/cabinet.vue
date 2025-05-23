@@ -1,5 +1,8 @@
-<script>
-export default {};
+<script setup>
+// export default {};
+definePageMeta({
+  middleware: ['auth'],
+});
 </script>
 <template>
   <div class="relative">

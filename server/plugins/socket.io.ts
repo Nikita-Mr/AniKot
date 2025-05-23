@@ -2,7 +2,7 @@ import type { NitroApp } from 'nitropack';
 import { Server as Engine } from 'engine.io';
 import { Server } from 'socket.io';
 import { defineEventHandler } from 'h3';
-import { Anime } from '~/server/modules/anime.model';
+import { Anime } from '~/server/modules/anime.model.ts';
 import mongoose from 'mongoose';
 
 export default defineNitroPlugin(async (nitroApp: NitroApp) => {
@@ -10,7 +10,7 @@ export default defineNitroPlugin(async (nitroApp: NitroApp) => {
   const io = new Server();
 
   try {
-    await mongoose.connect('mongodb://localhost:27017/chat');
+    // await mongoose.connect('mongodb://localhost:27017/chat');
   } catch (e) {
     console.error(e);
   }

@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
 export default {
   props: {
     chats: Array,
@@ -44,4 +44,4 @@ export default {
 .chat-list li:hover{
   background-color: #e0e0e0;
 }
-</style>
+</style> -->

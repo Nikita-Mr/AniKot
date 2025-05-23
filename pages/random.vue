@@ -29,12 +29,7 @@ export default {
 </script>
 <template>
   <div class="wrapp-random mb-5 relative">
-    <div class="alert flex justify-end gap-3 absolute right-0">
-      <div class="w-[30px] h-[30px] text-[30px] border-solid border-[2px] border-[#717171] p-5 text-red-600 flex justify-center items-center cursor-pointer" @click="isAlert = !isAlert">!</div>
-      <p :class="{'opacity-1 w-[300px] text-[11px]': isAlert, 'opacity-0 w-0 transition-all text-[11px]': !isAlert}"  v-if="isAlert">
-        Для обновления рандом тайтлов может потребоваться несколько кликов. Приносим прощения это не наша проблема, а API сервера 
-      </p>
-    </div>
+    <AppAlert :alert="'Для обновления рандом тайтлов может потребоваться несколько кликов. Приносим прощения это не наша проблема, а API сервера'" />
     <button class="random block m-[auto]" @click="loadRandom()">
       Рандомайз
     </button>
