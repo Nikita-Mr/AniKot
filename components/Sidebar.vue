@@ -1,20 +1,20 @@
-<!-- <script>
-export default {
+<script>
+// export default {
 
-};
+// };
 </script>
 <template>
   <div class="sidebar">
-    <h2>ShishGram</h2>
+    <!-- <h2>ShishGram</h2>
     <ul>
         <li>Chats</li>
         <li>Contacts</li>
         <li>Settings</li>    
-    </ul>
+    </ul> -->
   </div>
 </template>
 <style>
-.sidebar{
+/* .sidebar{
     width: 200px;
     background-color: #0e1e2a;
     color: #fff;
@@ -35,5 +35,5 @@ export default {
 }
 .sidebar li:hover{
     text-decoration: underline;
-}
-</style> -->
+} */
+</style>
